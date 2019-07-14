@@ -1,0 +1,143 @@
+@import 'variaveis.scss';
+@import 'funcoes.scss';
+
+
+body{
+	margin:0;
+	padding:0;
+	background: #f8f8f8;
+}
+
+h2{
+	color: $corPadrao;
+}
+
+section, .container{
+	margin:0;
+	max-width: 100%;
+	padding:0;
+}
+
+
+
+
+//Banner
+
+#banner{
+	background: url("../images/index-full-banner.jpg") center;
+	background-size: cover;
+	min-height: 419px;
+	padding-top:80px;
+	padding-bottom: 25px;
+}
+
+#banner p{
+	@include poppinsRegular;
+	font-size: 20px;
+	color: #fff;
+}
+
+#banner p .span_app{
+	font-size: 43px;
+}
+
+#banner p .span_dot{
+	font-family: auto;
+	font-size: 100px;
+	color: $corDoPonto;
+	margin-left: -10px;
+}
+
+#banner a{
+	display: table;
+	margin-top:45px;
+	padding: 15px 50px;
+	background: $corPadrao;
+	font-size: 20px;
+	@include bordaRedondaPadrao;
+	@include poppinsRegular;
+	text-decoration:none;
+	color:#fff;
+}
+
+//Slide
+
+.carrosel{
+	overflow:hidden;
+	margin-top: 25px;
+	width: 100% !important;
+	padding-bottom:50px;
+}
+.carrosel article{
+	width:70%;
+	min-width: 275px;
+	max-width: 370px;
+	margin:auto;
+}
+.carrosel .slide img{
+	margin:auto;
+	width:100%;
+	@include bordaRedondaSlideFotos;
+
+}
+
+.carrosel article .conteudo{
+	background:#fff;
+	width:100%;
+	padding:20px;
+}
+
+.carrosel article .conteudo p{
+	margin-top: 45px;
+	font-size:20px;
+	color:#8c94a8;
+}
+
+.carrosel button{
+	background: #9b9b9b !important;
+	border-radius: 50px;
+}
+
+.carrosel button:before{
+	display:none;
+}
+
+.slick-dots{
+	bottom:-53px !important;
+}
+
+.slick-active button{
+	background: $corPadrao !important;
+}
+
+
+//About us | Sobre nós
+
+
+#about aside{
+	display:block;
+	margin:auto;
+	width: 40%;
+	height:270px;
+	min-width:265px;
+	max-width: 367px;
+	@include bordaRedondaFotos;
+	overflow: hidden;
+}
+
+#about p{
+	font-size: 20px;
+	color: #3e4d60;
+	text-align: left;
+}
+
+#about p:first-of-type{
+	display:table;
+	margin-top: 45px;
+}
+
+#about header{
+	margin-top: 40px;
+}
+
+

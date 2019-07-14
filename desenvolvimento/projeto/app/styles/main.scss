@@ -1,3 +1,11 @@
+@import 'variaveis.scss';
+@import 'funcoes.scss';
+
+*{
+  outline: none !important;
+  @include poppinsRegular;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -84,4 +92,105 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.conteudo{
+  width: $conteudo;
+  margin: auto;
+}
+
+//Header 
+
+
+//Menu
+.logo{
+  max-width: 95px;
+}
+
+.navbar{
+  padding: 0px !important; 
+  position: static;
+}
+
+.navbar-toggler{
+  padding: 0px;
+  margin:0px;
+}
+
+.navbar-toggler-icon{
+  display: initial;
+  background-image: none !important;
+  @include fontElegant;
+  padding:0;
+}
+
+.navbar-light .navbar-toggler{
+  border: none;
+  font-size: 4em;
+  color:#fff;
+  outline:none;
+  margin-right: -10px;
+}
+
+nav{
+  max-width: $conteudo;
+  margin: auto;
+}
+
+header:first-of-type{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  border:none;
+  padding:0!important;
+  transition: 0.7s linear;
+  z-index:9;
+}
+
+.collapse:not(.show){
+  display:block;
+}
+.navbar-toggler-fechar{
+  display:none;
+}
+.navbar-nav{
+  position: absolute;
+  top:-8px;
+  height: 100vh !important;
+  left: -2000px !important;
+  height: 100vh !important;
+  background: $corPadrao;
+  transition: 1.5s;
+  width: 100%;
+  z-index: -1;
+  padding-top:145px;
+  opacity: 1 !important;
+
+}
+.mobile_ativado{
+  left:0px !important; 
+}
+.navbar-nav li{
+  width:100%;
+  text-align: center;
+  
+}
+.navbar-nav li a{
+  color: #fff !important;
+  font-size:24px;
+  padding:30px;
+}
+footer{
+  border-top: 1px solid #f1f1f2;
+}
+
+footer small{
+  text-align: center !important;
+  display:block;
+  margin: 15px auto 50px;
+  color:#bfbdbd;
+}
+
+.corRosa{
+  background: $corPadrao;
 }

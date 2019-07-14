@@ -1,0 +1,21 @@
+@mixin fontElegant{
+	font-family: "ElegantIcons",sans-serif;
+}
+
+@mixin poppinsRegular{
+	font-family: "Poppins-Regular",sans-serif;
+}
+
+@mixin bordaRedondaPadrao{
+	border-radius: 5px;
+}
+
+@mixin bordaRedondaFotos{
+    border-radius: 10px;
+}
+
+@mixin bordaRedondaSlideFotos{
+	border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; 
+}

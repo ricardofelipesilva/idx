@@ -1,11 +1,19 @@
+//Importalção das definições externas.
+
 @import 'variaveis.scss';
 @import 'funcoes.scss';
 
+
+//Definições gerais da página
 
 body{
 	margin:0;
 	padding:0;
 	background: #f8f8f8;
+}
+
+.texto-escondido{
+	font-size: 0px;
 }
 
 h2{
@@ -19,9 +27,21 @@ section, .container{
 }
 
 
+@media screen and (min-width: $tablet) {
+  .carrosel article{
+  	width: 300px;
+  }
+}
 
 
-//Banner
+@media screen and (min-width: $pc) {
+  .carrosel article{
+  	width: 370px;
+  }
+}
+
+
+//################################################ Banner #################################################
 
 #banner{
 	background: url("../images/index-full-banner.jpg") center;
@@ -29,16 +49,26 @@ section, .container{
 	min-height: 419px;
 	padding-top:80px;
 	padding-bottom: 25px;
+	@media screen and (min-width: $pc) {
+ 		min-height: 100vh;
+ 		padding-top:100px;
+ 	}
 }
 
 #banner p{
 	@include poppinsRegular;
 	font-size: 20px;
 	color: #fff;
+	@media screen and (min-width: $tablet) {
+		max-width: 532px;
+	}
 }
 
 #banner p .span_app{
 	font-size: 43px;
+	@media screen and (min-width: $pc) {
+ 		font-size: 114px;
+ 	}
 }
 
 #banner p .span_dot{
@@ -46,6 +76,12 @@ section, .container{
 	font-size: 100px;
 	color: $corDoPonto;
 	margin-left: -10px;
+
+	@media screen and (min-width: $pc) {
+  		color: $corPadrao;
+  		   font-size: 200px;
+		   margin-left: -39px;
+ 	}
 }
 
 #banner a{
@@ -58,9 +94,46 @@ section, .container{
 	@include poppinsRegular;
 	text-decoration:none;
 	color:#fff;
+	transition: 0.8s;
 }
 
-//Slide
+#banner a:hover{
+	background: #fff !important;
+	color: $corPadrao !important;
+}
+
+#banner article .row{
+	color: #fff;
+	margin-top: 90px;
+	display: none;
+}
+
+@media screen and (min-width: $pc) {
+  #banner article .row{
+  	display: flex;
+  }
+}
+
+#banner article .row .col{
+	border-right: 1px solid #fff;
+	font-size: 19px;
+	padding: 0 25px;
+}
+#banner article .row .col:nth-child(1){
+	text-align: right;
+	padding-top: 15px;
+}
+
+#banner article .row .col:nth-child(4){
+	border-right: 1px solid transparent;
+}
+#banner .today{
+	color: $corPadrao;
+	display: block;
+}
+
+
+//####################################### Slides #################################################
 
 .carrosel{
 	overflow:hidden;
@@ -73,12 +146,32 @@ section, .container{
 	min-width: 275px;
 	max-width: 370px;
 	margin:auto;
+	@media screen and (min-width: $tablet) {
+  		width:100%;
+  		max-width: 370px;
+  		margin:0px;
+ 	}
+ 	@media screen and (min-width: $pc) {
+ 		width:370px;
+ 		margin: 0;
+ 	}
+
 }
+.slideFinal article{
+	@media screen and (min-width: $pc) {
+	 		float: right;
+	}
+}
+
+.slideMeio article{
+	@media screen and (min-width: $pc) {
+	 	margin: auto !important;
+	 }
+}	
 .carrosel .slide img{
 	margin:auto;
 	width:100%;
 	@include bordaRedondaSlideFotos;
-
 }
 
 .carrosel article .conteudo{
@@ -93,9 +186,13 @@ section, .container{
 	color:#8c94a8;
 }
 
-.carrosel button{
-	background: #9b9b9b !important;
+.carrosel .slick-dots button{
+	background: #9b9b9b;
 	border-radius: 50px;
+}
+
+.carrosel .slick-dots button:hover{
+	background: $corDoPonto;
 }
 
 .carrosel button:before{
@@ -110,19 +207,57 @@ section, .container{
 	background: $corPadrao !important;
 }
 
+button.slick-arrow,button.slick-arrow:hover{
+	@media screen and (min-width: $tablet) {
+ 		width: 30px;
+		height: 30px;
+		font-size: 60px;
+		color: $corPadrao; 
+		z-index: 1;
+		transition: 0.8s;
+		@include fontElegant;
+ 	}
+ 	display:none;
+	
+}
 
-//About us | Sobre nós
+button.slick-arrow:hover{
+	color: $corDoPonto; 
+}
+button.slick-prev.slick-arrow{
+	left: -66px;
+}
+.slick-next {
+    right: -35px;
+}
+button.slick-arrow:hover{
+
+}
 
 
-#about aside{
+//########################################  About us | Sobre nós  #####################################################
+
+
+
+#about aside img{
+	@include bordaRedondaFotos;
+	width:270px;
 	display:block;
 	margin:auto;
-	width: 40%;
-	height:270px;
-	min-width:265px;
-	max-width: 367px;
-	@include bordaRedondaFotos;
-	overflow: hidden;
+
+	@media screen and (min-width: $tablet) {
+  		width:100%;
+  		max-width: 370px;
+  		margin:0px;
+ 	}
+
+ 	@media screen and (min-width: $pc) {
+ 		width:370px;
+ 	}
+}
+
+#about aside{
+	padding:0px;
 }
 
 #about p{
@@ -134,10 +269,16 @@ section, .container{
 #about p:first-of-type{
 	display:table;
 	margin-top: 45px;
+	@media screen and (min-width: $tablet) {
+	margin-top: 0px;
+	}
 }
 
-#about header{
+#about h2{
+	display: inline-block;
 	margin-top: 40px;
+	@media screen and (min-width: $tablet) {
+	margin-top: 0px;
+	}
 }
-
 

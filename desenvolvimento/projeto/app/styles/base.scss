@@ -1,0 +1,188 @@
+//Importalção das definições externas.
+@import 'variaveis.scss';
+@import 'funcoes.scss';
+
+//Gerais
+
+*{
+  outline: none !important;
+  @include poppinsRegular;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+.corRosa{
+  background: $corPadrao;
+}
+
+.row{
+  margin: auto;
+}
+
+
+@media screen and (min-width: $tablet) {
+  .navbar-toggler{
+    display: none !important;
+  }
+}
+
+.conteudo{
+  width: $conteudo;
+  max-width: $conteudoMax;
+  margin: auto;
+}
+
+//Header 
+
+
+//Menu
+
+.logo{
+  width: 100%;
+}
+
+.linkLogo{
+  width: 180px;
+  transition: 0.7s;
+}
+
+.linkLogoMenor{
+  width: 90px !important;
+}
+
+
+.navbar{
+  padding: 0px !important; 
+  position: static;
+}
+
+.navbar-toggler{
+  padding: 0px;
+  margin:0px;
+}
+
+.navbar-toggler-icon{
+  display: initial;
+  background-image: none !important;
+  @include fontElegant;
+  padding:0;
+}
+
+.navbar-light .navbar-toggler{
+  border: none;
+  font-size: 4em;
+  color:#fff;
+  outline:none;
+  margin-right: -10px;
+}
+
+
+nav{
+  width: $conteudo;
+  max-width: $conteudoMax;
+  margin: auto;
+}
+
+header:first-of-type{
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  border:none;
+  padding:0!important;
+  transition: 0.7s linear;
+  z-index:9;
+
+  @media screen and (min-width: $tablet) {
+    padding: 25px 0px !important;
+  }
+}
+
+.collapse:not(.show){
+  display:block;
+}
+.navbar-toggler-fechar{
+  display:none;
+}
+.navbar-nav{
+  position: absolute;
+  top:-8px;
+  height: 100vh !important;
+  left: -2000px !important;
+  height: 100vh !important;
+  background: $corPadrao;
+  transition: 1.5s;
+  width: 100%;
+  z-index: -1;
+  padding-top:145px;
+  opacity: 1 !important;
+   @media screen and (min-width: $tablet) {
+     z-index: 1;
+     left: 0px !important;
+     height: auto !important;
+     position: relative;
+     padding-top: 20px;
+     background:transparent;
+  }
+}
+.mobile_ativado{
+  left:0px !important; 
+}
+.navbar-nav{
+   @media screen and (min-width: $tablet) {
+    justify-content: flex-end;
+  }
+}
+.navbar-nav li{
+  width:100%;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+  transition: 0.8s;
+  @media screen and (min-width: $tablet) {
+    width: max-content;
+  }
+  
+}
+.navbar-nav li a{
+  cursor: pointer;
+  z-index: 999;
+  color: #fff !important;
+  font-size:24px;
+  padding:30px;
+  transition: 0.5s;
+  @media screen and (min-width: $tablet) {
+    font-size:15px;
+    padding:0px;
+    margin: 0 20px;
+  }
+}
+
+.navbar-nav li:hover{
+  border-bottom: 2px solid #fff;
+}
+
+
+
+//Rodapé
+
+footer{
+  border-top: 1px solid #f1f1f2;
+  @media screen and (min-width: $tablet) {
+     margin-top: 55px;
+  }
+}
+
+footer small{
+  text-align: center;
+  display:block;
+  margin: 15px auto 50px;
+  color:#bfbdbd;
+  @media screen and (min-width: $tablet) {
+       text-align: left;
+  }
+}

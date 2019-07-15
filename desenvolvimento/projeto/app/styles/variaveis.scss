@@ -1,5 +1,25 @@
+/**
+*Variáveis  gerais.
+*
+*Variáveis da folha atual:
+*
+*conteudo | conteudoMax (max-width) | corPadrao | corDoPonto | tablet  & pc (Media Query)
+*
+*Variaveis usadas em funcoes.scss | inicial.scss | base.scss
+**/
+
 $conteudo:90%;
+
+$conteudoMax: 1170px;
 
 $corPadrao: #ec008c;
 
 $corDoPonto: #4a90e2;
+
+//Medias Querys
+
+$tablet : 992px;
+
+$pc : 1200px;
+
+

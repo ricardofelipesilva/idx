@@ -1,3 +1,13 @@
+/**
+*Funções (Mixin) gerais.
+*
+*Funções da folha atual:
+*
+*fontElegant & poppinsRegular (fointes) | bordaRedondaPadrao & bordaRedondaFotos & bordaRedondaSlideFotos (bordas das imagens)
+*
+*Funções usadas em inicial.scss | base.scss
+**/
+
 @mixin fontElegant{
 	font-family: "ElegantIcons",sans-serif;
 }
